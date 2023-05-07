@@ -17,12 +17,29 @@
 const recursionPattern = (num1, num2) => {
     // write your code here
    
-    if (num1 < 0) {
+   /*if (num1 < 0) {
       return [num1, recursionPattern(num1 + num2, num2)];
     } else if (num1 >= 0 && num1 <= num2) {
       return [num1, recursionPattern(num1 - num2, num2)];
     } else {
       return [num1, recursionPattern(num1 - num2, num2)];
+    };*/
+    const result = [num1];
+    const recurse = (n, isDescending) => {
+      const nextNum = isDescending ? n - num2 : n + num2;
+      if (nextNum < 0) {
+        isDescending = false;
+      }
+      result.push(nextNum);
+      if (nextNum !== num1 || isDescending) {
+        recurse(nextNum, isDescending);
+      }
+    };
+    if (num2 === 0) {
+      return result;
+    } else {
+      recurse(num1, true);
+      return result;
     }
 };
 // -------------------------------------------------------------------------------------------------------
