@@ -14,17 +14,13 @@
 // Output: [50, 41, 32, 23, 14, 5, -4, 5, 14, 23, 32, 41, 50]
 //
 
-const recursionPattern = (num1, num2) => {
-    // write your code here
-   
-    if (num1 < 0) {
-      return [num1, recursionPattern(num1 + num2, num2)];
-    } else if (num1 >= 0 && num1 <= num2) {
-      return [num1, recursionPattern(num1 - num2, num2)];
-    } else {
-      return [num1, recursionPattern(num1 - num2, num2)];
-    }
-};
+const recursionPattern = (int1, int2) => {
+  // write your code here
+  if (int1 <= 0) {
+      return [int1];
+  }
+  const x = recursionPattern(int1 - int2, int2);
+  return [int1].concat(x, x.length === 0 ? [] : [int1]);}
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
