@@ -15,12 +15,8 @@
 //
 
 const recursionPattern = (int1, int2) => {
-  // write your code here
-  if (int1 <= 0) {
-      return [int1];
-  }
-  const x = recursionPattern(int1 - int2, int2);
-  return [int1].concat(x, x.length === 0 ? [] : [int1]);}
+    // write your code here
+}
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -39,13 +35,6 @@ const recursionPattern = (int1, int2) => {
 
 const filterLinks = (str) => {
     // write your code here
-    const regex = /href="(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?"/i;
-    const match = str.match(regex);
-    if (match) {
-      const url = new URL(match[0].split('"')[1]);
-      return url.hostname;
-    }
-    return null;
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -65,20 +54,6 @@ const filterLinks = (str) => {
 
 const isPalindrome = (str) => {
     // write your code here
-    // Convert all uppercase letters to lowercase letters
-  const lowerCaseStr = str.toLowerCase();
-  
-  // Remove all non-alphanumeric characters
-  const alphanumericStr = lowerCaseStr.replace(/[^a-z0-9]/g, '');
-  
-  // Check if the alphanumeric string reads the same forward and backward
-  for (let i = 0; i < alphanumericStr.length / 2; i++) {
-    if (alphanumericStr[i] !== alphanumericStr[alphanumericStr.length - i - 1]) {
-      return false;
-    }
-  }
-  
-  return true;
 }
 // -------------------------------------------------------------------------------------------------------
 

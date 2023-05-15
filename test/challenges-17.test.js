@@ -5,23 +5,13 @@ const {
     samePattern,
 } = require("../code-challenges/challenges-17");
 
-/*describe("Challenge17-01", () => {
+describe("Challenge17-01", () => {
   test("Recursion-Pattern", () => {
     let Output1 = [16, 11, 6, 1, -4, 1, 6, 11, 16];
     let Output2 = [50, 41, 32, 23, 14, 5, -4, 5, 14, 23, 32, 41, 50];
 
     expect(recursionPattern(16, 5)).toStrictEqual(Output1);
     expect(recursionPattern(50, 9)).toStrictEqual(Output2);
-  });
-});*/
-
-describe("Challenge17-01", () => {
-  test("Recursion-Pattern", () => {
-    let Output1 = [16, 11, 6, 1, -4, 1, 6, 11, 16];
-    let Output2 = [50, 41, 32, 23, 14, 5, -4, 5, 14, 23, 32, 41, 50];
-
-    expect(recursionPattern(16, 5)).toEqual(Output1.slice(0, 5));
-    expect(recursionPattern(50, 9)).toEqual(Output2.slice(0, 9));
   });
 });
 
